@@ -1,0 +1,16 @@
+{
+  "name": "equatorial-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Equatorial Oilfield Services – site vitrine (Next.js, export statique pour LWS)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve out -l 3000"
+  },
+  "dependencies": {
+    "next": "^15.5.29",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
