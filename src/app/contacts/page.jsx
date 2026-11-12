@@ -4,7 +4,7 @@ import Faq from "@/components/Faq";
 import { Pin, Phone, Mail, LinkedIn } from "@/components/Icon";
 import { img, company, faqs } from "@/data/site";
 
-export const metadata = { title: "Contact Us", description: "Contact Equatorial Oilfield Services in Akwa, Douala, Cameroon — +237 696 609 970 — info@equatorial-os.com." };
+export const metadata = { title: "Contact Us", description: "Contact Equatorial Oilfield Services in Bali, Douala, Cameroon — +237 696 609 970 — info@equatorial-os.com." };
 
 export default function Contact() {
   const cards = [
@@ -36,7 +36,7 @@ export default function Contact() {
       </section>
 
       <div className="map reveal">
-        <iframe title="Map — Akwa, Douala" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+        <iframe title="Map — Bali, Douala" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
           src={`https://www.google.com/maps?q=${encodeURIComponent(company.mapQuery)}&z=14&output=embed`} />
       </div>
 

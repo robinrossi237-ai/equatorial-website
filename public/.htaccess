@@ -13,6 +13,18 @@ RewriteRule ^our-products/?$ /products/ [L,R=301]
 RewriteRule ^team/?$ /our-team/ [L,R=301]
 RewriteRule ^our-products/b-exo/?$ /our-products/b-exo-dual-pack-wax/ [L,R=301]
 RewriteRule ^wp-login\.php$ / [L,R=301]
+RewriteRule ^wp-admin / [L,R=301]
+
+# Anciennes images WordPress (/wp-content/uploads/2023/03/photo-300x200.jpg)
+# -> nouvelles images (/images/2023-03-photo.jpg), si le fichier existe
+RewriteCond %{DOCUMENT_ROOT}/images/$1-$2-$3.$5 -f
+RewriteRule ^wp-content/uploads/(\d{4})/(\d{2})/(.+?)(-\d+x\d+)?\.(jpe?g|png|webp|gif)$ /images/$1-$2-$3.$5 [L,R=301,NC]
+
+# Flux RSS, catégories, auteurs, liens courts WordPress -> accueil
+RewriteRule ^(comments/)?feed/?$ / [L,R=301]
+RewriteRule ^(category|tag|author)(/.*)?$ / [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)(p|page_id)=[0-9]+ [NC]
+RewriteRule ^$ /? [L,R=301]
 </IfModule>
 
 ErrorDocument 404 /404.html

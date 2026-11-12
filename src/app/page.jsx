@@ -21,8 +21,8 @@ export default function Home() {
             <span className="about-media__sq" aria-hidden="true" />
             <div className="about-media__main img-reveal"><img src={img.heroSunset} alt="Offshore oil & gas production platform at dusk" loading="lazy" /></div>
             <div className="about-media__card reveal" style={{ "--d": "300ms" }}>
-              <strong data-count="15" data-suffix="+">0+</strong>
-              <span>years of reliable service in the Gulf of Guinea</span>
+              <strong style={{ fontSize: 44 }}>Since 2011</strong>
+              <span>Reliable services across the Gulf of Guinea</span>
             </div>
           </div>
           <div style={{ position: "relative" }}>
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="section-head section-head--split">
             <div>
               <div className="kicker reveal">What we do</div>
-              <h2 className="reveal" style={{ "--d": "80ms" }}>Engineering services built on 15 years in the field</h2>
+              <h2 className="reveal" style={{ "--d": "80ms" }}>Engineering services trusted since 2011</h2>
             </div>
             <Link href="/our-services/" className="link-arrow reveal">All services <ArrowDR /></Link>
           </div>

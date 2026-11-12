@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Motion from "@/components/Motion";
+import Preloader from "@/components/Preloader";
 import { company } from "@/data/site";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-manrope", display: "swap" });
@@ -26,15 +27,25 @@ const jsonLd = {
   email: company.email,
   telephone: company.phones[0],
   foundingDate: String(company.founded),
-  address: { "@type": "PostalAddress", addressLocality: "Douala", addressRegion: "Akwa", addressCountry: "CM" },
+  address: { "@type": "PostalAddress", addressLocality: "Douala", addressRegion: "Bali", addressCountry: "CM" },
   sameAs: [company.linkedin],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={manrope.variable} suppressHydrationWarning>
       <body id="top">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {/* Pas d'écran d'accueil si déjà vu pendant cette visite */}
+        <script dangerouslySetInnerHTML={{ __html: "try{if(sessionStorage.getItem('eqos-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}" }} />
+        <div id="preloader" className="preloader" aria-hidden="true">
+          <div className="preloader__inner">
+            <div className="preloader__word">EQOS</div>
+            <div className="preloader__bar"><span /></div>
+            <div className="preloader__tag">Customized Engineering for the Future</div>
+          </div>
+        </div>
+        <Preloader />
         <Header />
         <main>{children}</main>
         <Footer />

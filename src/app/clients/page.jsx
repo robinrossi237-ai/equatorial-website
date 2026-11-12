@@ -5,7 +5,7 @@ import { img, clients, partners, testimonials, company } from "@/data/site";
 export const metadata = { title: "Clients & Partners", description: "SCDP, Addax Petroleum, Perenco, Petrofor, Bowleven, Schlumberger and more trust Equatorial Oilfield Services." };
 
 export default function Clients() {
-  const years = new Date().getFullYear() - company.founded;
+
   return (
     <>
       <PageHero title="Clients & Partners" text="Long-term relationships built on reliability, safety and results." image={img.heroPlatform} crumbs={[{ label: "About Us", href: "/about/" }, { label: "Clients & Partners" }]} />
@@ -15,7 +15,7 @@ export default function Clients() {
           <div style={{ position: "sticky", top: 110 }}>
             <div className="kicker reveal">Clients</div>
             <h2 className="reveal" style={{ fontSize: "clamp(30px,3.8vw,46px)" }}>Clients who trust Equatorial Oilfield Services</h2>
-            <p className="lead reveal">We are proud to serve our clients with excellence and integrity. For over {years} years we have provided reliable and cost-effective oil and gas solutions, earning the trust and respect of many satisfied customers.</p>
+            <p className="lead reveal">We are proud to serve our clients with excellence and integrity. Since 2011, we have provided reliable and cost-effective oil and gas solutions, earning the trust and respect of many satisfied customers.</p>
             <div className="about-media__card reveal" style={{ position: "relative", width: 260, marginTop: 30 }}>
               <strong data-count="200" data-suffix="+">0+</strong><span>Happy clients</span>
             </div>

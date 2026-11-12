@@ -38,12 +38,12 @@ export const company = {
   tagline: "Customized Engineering for the Future",
   motto: "Quality · Integrity · People",
   founded: 2011,
-  address: ["Akwa, Douala", "Cameroon"],
+  address: ["Bali, Douala", "Cameroon"],
   phones: ["+237 696 609 970", "+237 33 42 44 02"],
   email: "info@equatorial-os.com",
   linkedin: "https://www.linkedin.com/company/equatorial-oilfield-services/",
   video: "Ybgl_8n8wdU",
-  mapQuery: "Akwa, Douala, Cameroon",
+  mapQuery: "Bali, Douala, Cameroon",
 };
 
 export const nav = [
@@ -112,7 +112,7 @@ export const engineeringServices = [
     intro: "Well-known for our reliable services in the Gulf of Guinea, we have become an industry leader in directional drilling through our extensive drilling operations.",
     list: ["Rig installation", "MWD", "LWD", "Well construction design", "Wireline", "Slickline", "Mud Engineering"],
     body: [
-      "Over the last 12+ years, we have managed the drilling and completion of 120+ wells across multiple unconventional resource plays. The highly predictable nature of our drilling inventory provides us with a great deal of precision, as we can quickly and effectively adjust our activity in response to changes in commodity prices.",
+      "Since 2011, we have managed the drilling and completion of 120+ wells across multiple unconventional resource plays. The highly predictable nature of our drilling inventory provides us with a great deal of precision, as we can quickly and effectively adjust our activity in response to changes in commodity prices.",
       "We have acquired expertise through experience and partnership to deliver Drilling Procurement Solutions.",
     ],
     blocks: [
@@ -403,7 +403,7 @@ export const partners = [
 ];
 
 export const faqs = [
-  { q: "Where can I find the company?", a: "Equatorial Oilfield Services is located in Akwa, a quarter of Douala, the economic capital of Cameroon." },
+  { q: "Where can I find the company?", a: "Equatorial Oilfield Services is located in Bali, a district of Douala, the economic capital of Cameroon." },
   { q: "How do I work with Equatorial OS?", a: "Send us your request through the contact form, by email at info@equatorial-os.com or by phone. Our team will review your needs and get back to you promptly with a tailored proposal or quotation." },
   { q: "Which countries do you operate in?", a: "We are based in Cameroon and operate across the Gulf of Guinea, West and Central Africa, with the ambition to extend our services to the rest of Africa." },
   { q: "Can you supply petroleum products in large volumes?", a: "Yes. Through our network of producers, traders and logistics partners, we supply crude oil, refined products, diesel, Jet A-1, LPG and more, with storage, transport and trade finance solutions." },
