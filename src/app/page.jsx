@@ -5,7 +5,7 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import { ArrowDR } from "@/components/Icon";
 import { SectionHead, ServiceCard, TradeCard, ProductCard, ProjectCard, Marquee, Stats, Skills, Cta } from "@/components/Blocks";
-import { heroSlides, company, stats, img, engineeringServices, tradingServices, products, productCategories, projects, testimonials, partners, clients, faqs, skills } from "@/data/site";
+import { heroSlides, company, stats, img, engineeringServices, trading, products, productCategories, projects, testimonials, partners, clients, faqs, skills } from "@/data/site";
 
 export default function Home() {
   const catName = Object.fromEntries(productCategories.map((c) => [c.id, c.id === "flow-assurance" ? "Flow assurance" : "Downhole tools"]));
@@ -66,10 +66,10 @@ export default function Home() {
               <h2 className="reveal" style={{ "--d": "80ms" }}>Energy products, delivered on time and on spec</h2>
               <p className="reveal" style={{ "--d": "160ms" }}>From crude oil to Jet A-1 and LPG, backed by storage, transport and trade finance solutions.</p>
             </div>
-            <Link href="/our-services/#trading" className="btn btn--navy reveal">Explore trading & supply <ArrowDR /></Link>
+            <Link href="/trading/" className="btn btn--navy reveal">Explore trading & supply <ArrowDR /></Link>
           </div>
-          <div className="trade-grid">
-            {tradingServices.slice(0, 8).map((t, k) => <TradeCard key={t.title} t={t} i={k} />)}
+          <div className="trade-grid trade-grid--3">
+            {trading.map((t, k) => <TradeCard key={t.slug} t={t} i={k} />)}
           </div>
         </div>
       </section>

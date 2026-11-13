@@ -52,7 +52,8 @@ export const nav = [
     label: "Services & Products",
     href: "/our-services/",
     children: [
-      { label: "Our Services", href: "/our-services/", desc: "Engineering, trading & supply" },
+      { label: "Our Services", href: "/our-services/", desc: "Engineering services" },
+      { label: "Trading & Supply", href: "/trading/", desc: "Crude oil, refined products, logistics" },
       { label: "Our Products", href: "/products/", desc: "Flow assurance & downhole tools" },
     ],
   },
@@ -95,7 +96,7 @@ export const heroSlides = [
     kicker: "Petroleum products trading & supply",
     title: "From the wellhead to the market",
     text: "Crude oil, refined products, diesel, Jet A-1, LPG, storage, transport and trade finance — one trusted partner for your energy needs.",
-    cta: { label: "See trading & supply", href: "/our-services/#trading" },
+    cta: { label: "See trading & supply", href: "/trading/" },
   },
 ];
 
@@ -175,18 +176,66 @@ export const engineeringServices = [
 // ---------------------------------------------------------------------
 //  TRADING & SUPPLY (produits pétroliers)
 // ---------------------------------------------------------------------
-export const tradingServices = [
-  { icon: "crude", title: "Crude Oil & Petroleum Products", text: "We source and supply crude oil and petroleum products through a trusted network of producers and traders across Africa and beyond." },
-  { icon: "refined", title: "Refined Products", text: "We deliver refined products that meet international quality standards, with full documentation and traceability." },
-  { icon: "fuel", title: "Fuel Oil", text: "Reliable supply of fuel oil for power plants, industries and marine operators, with flexible volumes and delivery schedules." },
-  { icon: "diesel", title: "Gasoil / Diesel", text: "Diesel supply for industrial sites, mining, transport fleets and generator operations, delivered on time and on spec." },
-  { icon: "gasoline", title: "Gasoline", text: "Gasoline supply for distributors and service-station networks, backed by secure logistics." },
-  { icon: "jet", title: "Kerosene / Jet A-1", text: "Jet A-1 and kerosene supply that complies with aviation quality standards, for airlines, airports and distributors." },
-  { icon: "lpg", title: "LPG", text: "Liquefied petroleum gas supply for domestic, commercial and industrial use, handled under strict safety standards." },
-  { icon: "energy", title: "Other Energy Products", text: "A wide range of energy products tailored to your operational needs. Contact us for your specific requirements." },
-  { icon: "storage", title: "Storage & Transport", text: "Secure storage and transport solutions by road and sea, so your products arrive safely, on time and on spec." },
-  { icon: "import", title: "Import, Export & Distribution", text: "End-to-end handling of import, export and distribution operations, including customs and regulatory compliance." },
-  { icon: "finance", title: "Trade Finance", text: "We help structure the financing of commercial transactions, giving our partners the security and flexibility they need." },
+// Les produits raffinés (gasoil, essence, Jet A-1, fioul, GPL) sont regroupés
+// sous "Refined Products". Chaque activité a sa page : /trading/<slug>/
+const T = (name) => `/images/trading-${name}.jpg`;
+
+export const refinedProducts = [
+  { slug: "gasoil-diesel", icon: "diesel", title: "Gasoil / Diesel", image: T("diesel"),
+    text: "Diesel supply for industrial sites, mining, transport fleets and generator operations, delivered on time and on spec.",
+    uses: ["Industrial sites & mining", "Transport fleets", "Power generators", "Construction & agriculture"] },
+  { slug: "gasoline", icon: "gasoline", title: "Gasoline", image: T("gasoline"),
+    text: "Gasoline supply for distributors and service-station networks, backed by secure logistics.",
+    uses: ["Fuel distributors", "Service-station networks", "Corporate fleets"] },
+  { slug: "kerosene-jet-a1", icon: "jet", title: "Kerosene / Jet A-1", image: T("jet"),
+    text: "Jet A-1 and kerosene supply that complies with aviation quality standards, for airlines, airports and distributors.",
+    uses: ["Airlines & airports", "Aviation fuel distributors", "Domestic & industrial kerosene"] },
+  { slug: "fuel-oil", icon: "fuel", title: "Fuel Oil", image: T("fuel-oil"),
+    text: "Reliable supply of fuel oil for power plants, industries and marine operators, with flexible volumes and delivery schedules.",
+    uses: ["Power plants", "Heavy industry", "Marine bunkering"] },
+  { slug: "lpg", icon: "lpg", title: "LPG (Liquefied Petroleum Gas)", image: T("lpg"), image2: T("lpg-cylinders"),
+    text: "Liquefied petroleum gas supply for domestic, commercial and industrial use, handled under strict safety standards.",
+    uses: ["Bottling & distribution centres", "Hotels, restaurants & commercial users", "Industrial heating"] },
+];
+
+export const trading = [
+  {
+    slug: "crude-oil", icon: "crude", title: "Crude Oil & Petroleum Products", image: T("crude"),
+    excerpt: "We source and supply crude oil and petroleum products through a trusted network of producers and traders across Africa and beyond.",
+    intro: "Through long-standing relationships with producers, traders and logistics partners, we source crude oil and petroleum products that match your specifications, volumes and delivery windows.",
+    points: ["Sourcing from a trusted network of producers and traders", "Quality and quantity inspection at loading and discharge", "Flexible volumes, spot or term contracts", "Full documentation and traceability"],
+  },
+  {
+    slug: "refined-products", icon: "refined", title: "Refined Products", image: T("refined"),
+    excerpt: "Gasoil / Diesel, Gasoline, Kerosene / Jet A-1, Fuel Oil and LPG — refined products that meet international quality standards.",
+    intro: "We deliver refined products that meet international quality standards, with full documentation and traceability — from a single truckload to large cargoes.",
+    points: ["Products certified to international specifications", "Supply by road, sea and storage depots", "Delivered on time and on spec", "Dedicated follow-up for each order"],
+    products: refinedProducts,
+  },
+  {
+    slug: "other-energy-products", icon: "energy", title: "Other Energy Products", image: img.heroSunset,
+    excerpt: "A wide range of energy products tailored to your operational needs. Contact us for your specific requirements.",
+    intro: "Beyond our core range, we help you source the energy products your operations depend on — lubricants, bitumen, additives and other specialised products on request.",
+    points: ["Products sourced to your specifications", "Advice on the right product for your operations", "Competitive pricing through our network", "Delivery to your site"],
+  },
+  {
+    slug: "storage-transport", icon: "storage", title: "Storage & Transport", image: T("storage"),
+    excerpt: "Secure storage and transport solutions by road and sea, so your products arrive safely, on time and on spec.",
+    intro: "Our logistics partners and depots keep your products moving safely — from storage tanks to tanker trucks and vessels — with strict HSE standards at every step.",
+    points: ["Storage in secure depots and tank farms", "Road transport by certified tanker trucks", "Sea transport and coastal delivery", "Product quality preserved from loading to delivery"],
+  },
+  {
+    slug: "import-export-distribution", icon: "import", title: "Import, Export & Distribution", image: T("import"),
+    excerpt: "End-to-end handling of import, export and distribution operations, including customs and regulatory compliance.",
+    intro: "We manage the whole chain of import, export and distribution operations, so your products cross borders and reach their destination without delays.",
+    points: ["Customs clearance and regulatory compliance", "Shipping and port coordination", "Distribution to depots, stations and end users", "Local knowledge of Cameroon and the CEMAC region"],
+  },
+  {
+    slug: "trade-finance", icon: "finance", title: "Trade Finance", image: T("finance"),
+    excerpt: "We help structure the financing of commercial transactions, giving our partners the security and flexibility they need.",
+    intro: "Energy transactions require secure and flexible financing. We work with financial partners to structure solutions adapted to each deal.",
+    points: ["Structuring of commercial transactions", "Payment security for buyers and sellers", "Work with banks and financial partners", "Flexible terms adapted to each deal"],
+  },
 ];
 
 // ---------------------------------------------------------------------

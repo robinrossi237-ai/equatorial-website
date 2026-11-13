@@ -51,13 +51,21 @@ export function ServiceCard({ s, i = 0 }) {
   );
 }
 
+/** Carte d'activité trading : photo, icône, texte, sous-produits ; mène à sa propre page */
 export function TradeCard({ t, i = 0 }) {
   return (
-    <Link href="/contacts/" className="trade reveal" style={{ "--d": `${(i % 4) * 80}ms` }}>
-      <span className="trade__num">{String(i + 1).padStart(2, "0")}</span>
-      <ServiceIcon name={t.icon} className="trade__icon" />
-      <h3>{t.title}</h3>
-      <p>{t.text}</p>
+    <Link href={`/trading/${t.slug}/`} className="trade trade--photo reveal" style={{ "--d": `${(i % 3) * 100}ms` }}>
+      <div className="trade__media"><img src={t.image} alt={t.title} loading="lazy" /></div>
+      <div className="trade__body">
+        <span className="trade__num">{String(i + 1).padStart(2, "0")}</span>
+        <ServiceIcon name={t.icon} className="trade__icon" />
+        <h3>{t.title}</h3>
+        <p>{t.excerpt}</p>
+        {t.products && (
+          <ul className="trade__chips">{t.products.map((p) => <li key={p.slug}>{p.title.replace(" (Liquefied Petroleum Gas)", "")}</li>)}</ul>
+        )}
+        <span className="link-arrow trade__more">Learn more <ArrowDR /></span>
+      </div>
     </Link>
   );
 }

@@ -48,7 +48,7 @@ export default async function ServicePage({ params }) {
               {detailed.map((x) => (
                 <Link key={x.slug} href={`/services/${x.slug}/`} className={x.slug === s.slug ? "is-active" : ""}>{x.title} <ArrowR /></Link>
               ))}
-              <Link href="/our-services/#trading">Trading & Supply <ArrowR /></Link>
+              <Link href="/trading/">Trading & Supply <ArrowR /></Link>
             </nav>
             <div className="side-cta" style={{ "--img": `url(${img.engineer})` }}>
               <h4>Do you want to work with us?</h4>

@@ -34,7 +34,7 @@ export default function Footer() {
                 {engineeringServices.filter((s) => s.body).map((s) => (
                   <Link key={s.slug} href={`/services/${s.slug}/`}>{s.title}</Link>
                 ))}
-                <Link href="/our-services/#trading">Trading & Supply</Link>
+                <Link href="/trading/">Trading & Supply</Link>
                 <Link href="/products/">Our Products</Link>
               </div>
             </div>

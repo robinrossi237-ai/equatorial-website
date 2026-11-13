@@ -674,3 +674,42 @@ ul { margin: 0; padding: 0; list-style: none; }
   .preloader, .page-curtain { display: none !important; }
   .page-enter { animation: none; }
 }
+
+/* =====================================================================
+   TRADING & SUPPLY : cartes avec photo + pages dédiées
+   ===================================================================== */
+.trade-grid--3 { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+@media (max-width: 960px) { .trade-grid--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .trade-grid--3 { grid-template-columns: 1fr; } }
+.trade--photo { padding: 0; display: flex; flex-direction: column; }
+.trade__media { aspect-ratio: 16 / 10; overflow: hidden; position: relative; z-index: 1; }
+.trade__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease); }
+.trade--photo:hover .trade__media img { transform: scale(1.08); }
+.trade__body { position: relative; z-index: 1; padding: 30px 28px 30px; display: flex; flex-direction: column; flex: 1; }
+.trade--photo .trade__icon { margin: -62px 0 18px; width: 64px; height: 64px; padding: 12px; background: var(--yellow); color: var(--navy); border-radius: var(--radius); box-shadow: var(--shadow); }
+.trade--photo:hover .trade__icon { color: var(--navy); }
+.trade--photo .trade__num { top: 24px; right: 26px; }
+.trade--photo p { flex: 1; }
+.trade__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.trade__chips li { padding: 6px 10px; font-size: 12.5px; font-weight: 700; color: var(--navy); background: var(--bg-soft); border-left: 3px solid var(--yellow); transition: background 0.4s, color 0.4s; }
+.trade--photo:hover .trade__chips li { background: rgba(255,255,255,0.1); color: #fff; }
+.trade__more { margin-top: 22px; align-self: flex-start; }
+.trade--photo:hover .trade__more { color: #fff; }
+
+.refined { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 60px 0; border-top: 1px solid var(--line); }
+.refined:first-of-type { border-top: 0; }
+.refined:nth-of-type(even) .refined__media { order: 2; }
+@media (max-width: 900px) { .refined { grid-template-columns: 1fr; gap: 30px; } .refined:nth-of-type(even) .refined__media { order: 0; } }
+.refined__media { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); }
+.refined__media img { width: 100%; height: 100%; object-fit: cover; }
+.refined__media .refined__inset { position: absolute; right: -24px; bottom: -24px; width: 42%; aspect-ratio: 1; object-fit: cover; border: 6px solid #fff; box-shadow: var(--shadow); }
+.refined__head { display: flex; gap: 18px; align-items: center; margin-bottom: 14px; }
+.refined__head .trade__icon { margin: 0; width: 58px; height: 58px; padding: 11px; background: var(--yellow); color: var(--navy); border-radius: var(--radius); }
+.refined__head h3 { font-size: clamp(24px, 2.6vw, 32px); margin: 0; }
+.sub-nav { position: sticky; top: 74px; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
+.sub-nav .container { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.sub-nav a { flex: none; padding: 18px 16px; font-weight: 700; font-size: 14px; color: var(--ink); border-bottom: 3px solid transparent; transition: all 0.3s; }
+.sub-nav a:hover { color: var(--navy); border-bottom-color: var(--yellow); }
+.feature .trade__icon { color: var(--yellow); width: 50px; height: 50px; margin-bottom: 18px; transition: color 0.4s; }
+.feature:hover .trade__icon { color: var(--navy); }
+a.feature { display: block; }

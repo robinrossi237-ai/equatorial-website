@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PageHero, SectionHead, ServiceCard, TradeCard, Cta } from "@/components/Blocks";
 import { ArrowDR } from "@/components/Icon";
-import { img, engineeringServices, tradingServices } from "@/data/site";
+import { img, engineeringServices, trading } from "@/data/site";
 
 export const metadata = { title: "Our Services", description: "Drilling engineering, facilities engineering, flow assurance, project management, QHSE, manpower support — and petroleum products trading & supply." };
 
@@ -36,8 +36,8 @@ export default function Services() {
             </div>
             <Link href="/contacts/" className="btn btn--navy reveal">Request a quote <ArrowDR /></Link>
           </div>
-          <div className="trade-grid">
-            {tradingServices.map((t, k) => <TradeCard key={t.title} t={t} i={k} />)}
+          <div className="trade-grid trade-grid--3">
+            {trading.map((t, k) => <TradeCard key={t.slug} t={t} i={k} />)}
           </div>
         </div>
       </section>
