@@ -664,11 +664,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .page-curtain {
   position: fixed; inset: 0; z-index: 250; pointer-events: none; background: var(--navy);
   border-bottom: 6px solid var(--yellow); transform-origin: top;
-  animation: curtainUp 0.75s var(--ease) 0.05s both;
+  animation: curtainUp 0.42s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
 @keyframes curtainUp { from { transform: scaleY(1); } to { transform: scaleY(0); } }
-.page-enter { animation: pageIn 0.8s var(--ease) 0.2s both; }
-@keyframes pageIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.page-enter { animation: pageIn 0.45s var(--ease) 0.08s both; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   .preloader, .page-curtain { display: none !important; }
