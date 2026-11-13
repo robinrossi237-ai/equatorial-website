@@ -13,7 +13,7 @@ export const metadata = {
   title: { default: `${company.name} — ${company.tagline}`, template: `%s | ${company.name}` },
   description: "Equatorial Oilfield Services (EQOS) — engineering, procurement, construction and management of oil & gas assets, and petroleum products trading & supply. Based in Douala, Cameroon, since 2011.",
   keywords: ["oil and gas Cameroon", "drilling engineering", "facilities engineering", "flow assurance", "petroleum products supply", "Douala", "Gulf of Guinea", "EQOS"],
-  openGraph: { type: "website", siteName: company.name, locale: "en_US", images: ["/images/2023-02-offshore-oil-rig-platform-in-the-gulf-from-aerial-view.jpg"] },
+  openGraph: { type: "website", siteName: company.name, locale: "en_US", images: [{ url: "/og-image.jpg", width: 1200, height: 630 }] },
   icons: { icon: "/favicon.svg" },
 };
 

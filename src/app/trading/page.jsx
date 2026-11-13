@@ -13,7 +13,7 @@ export default function Trading() {
   return (
     <>
       <PageHero title="Petroleum Products Trading & Supply" text="A trusted network of producers, traders and logistics partners to supply the energy products your operations depend on."
-        image="/images/trading-import.jpg" crumbs={[{ label: "Services", href: "/our-services/" }, { label: "Trading & Supply" }]} />
+        image="/images/trading-import.webp" crumbs={[{ label: "Services", href: "/our-services/" }, { label: "Trading & Supply" }]} />
 
       <section className="section section--soft">
         <div className="container">

@@ -6,30 +6,29 @@
 const I = (name) => `/images/${name}`;
 
 export const img = {
-  logo: I("2022-05-EQOS-Flow-assurance-solution.jpg"),
-  heroRig: I("2023-02-offshore-oil-rig-platform-in-the-gulf-from-aerial-view.jpg"),
-  heroPlatform: I("2023-02-offshore-production-platform-in-the-sea-for-oil-and-gas-production.jpg"),
-  heroSunset: I("2023-02-offshore-the-sunset-industry-oil-and-gas-production-petroleum-pipeline-background.jpg"),
-  heroYellow: I("2023-02-offshore-drill-yellow-oil-and-gas-wave-sea-production-petroleum-pipeline-1.jpg"),
-  factory: I("2023-02-aerial-view-cement-factory-with-high-concrete-plant-structure-tower-crane-industrial-production-area-manufacture-global-industry-concept.jpg"),
-  steel: I("2022-08-ant-rozetsky-_qWeqqmpBpU-unsplash.jpg"),
-  map: I("2022-09-map.png"),
-  tools: I("2022-05-tete-wireline.jpg"),
-  worker: I("2022-05-shutterstock_1413841523-scaled-e1677744968647.jpg"),
-  teamBg: I("2022-08-10_team_single.jpg"),
-  jackup: I("2022-05-Jack-up-installation-2.jpg"),
-  jackup2: I("2022-05-Jack-up-instal.jpg"),
-  piping: I("2022-05-Conception-de-tuyauterie.jpg"),
-  flow: I("2022-05-process_and_flow_assurance_BIG.jpg"),
-  generator: I("2022-05-Groupe-electrogene.jpg"),
-  clientsBg: I("2022-12-clients-page-title-bg.jpg"),
-  pipes: I("2022-07-cover-bg.jpg"),
-  workshop: I("2022-06-process-building-space-rocket-engine-1.jpg"),
-  engineer: I("2022-06-young-male-handyman-with-safety-earphones.jpg"),
-  welding: I("2022-08-christopher-burns-8KfCR12oeUM-unsplash.jpg"),
-  plant: I("2022-04-anton-shakirov-k6pXI12U9ek-unsplash.jpg"),
-  eqosCrew: I("2023-02-Petrofor-EQOS.jpg"),
-  pipelineSite: I("2023-02-Burcoplus-SCDP.jpg"),
+  logo: I("2022-05-EQOS-Flow-assurance-solution.webp"),
+  heroRig: I("2023-02-offshore-oil-rig-platform-in-the-gulf-from-aerial-view.webp"),
+  heroPlatform: I("2023-02-offshore-production-platform-in-the-sea-for-oil-and-gas-production.webp"),
+  heroSunset: I("2023-02-offshore-the-sunset-industry-oil-and-gas-production-petroleum-pipeline-background.webp"),
+  heroYellow: I("2023-02-offshore-drill-yellow-oil-and-gas-wave-sea-production-petroleum-pipeline-1.webp"),
+  factory: I("2023-02-aerial-view-cement-factory-with-high-concrete-plant-structure-tower-crane-industrial-production-area-manufacture-global-industry-concept.webp"),
+  steel: I("2022-08-ant-rozetsky-_qWeqqmpBpU-unsplash.webp"),
+  map: I("2022-09-map.webp"),
+  tools: I("2022-05-tete-wireline.webp"),
+  worker: I("2022-05-shutterstock_1413841523-scaled-e1677744968647.webp"),
+  teamBg: I("2022-08-10_team_single.webp"),
+  jackup: I("2022-05-Jack-up-installation-2.webp"),
+  jackup2: I("2022-05-Jack-up-instal.webp"),
+  piping: I("2022-05-Conception-de-tuyauterie.webp"),
+  flow: I("2022-05-process_and_flow_assurance_BIG.webp"),
+  generator: I("2022-05-Groupe-electrogene.webp"),
+  clientsBg: I("2022-12-clients-page-title-bg.webp"),
+  pipes: I("2022-07-cover-bg.webp"),
+  workshop: I("2022-06-process-building-space-rocket-engine-1.webp"),
+  engineer: I("2022-06-young-male-handyman-with-safety-earphones.webp"),
+  welding: I("2022-08-christopher-burns-8KfCR12oeUM-unsplash.webp"),
+  plant: I("2022-04-anton-shakirov-k6pXI12U9ek-unsplash.webp"),
+  pipelineSite: I("2023-02-Burcoplus-SCDP.webp"),
 };
 
 export const company = {
@@ -178,7 +177,7 @@ export const engineeringServices = [
 // ---------------------------------------------------------------------
 // Les produits raffinés (gasoil, essence, Jet A-1, fioul, GPL) sont regroupés
 // sous "Refined Products". Chaque activité a sa page : /trading/<slug>/
-const T = (name) => `/images/trading-${name}.jpg`;
+const T = (name) => `/images/trading-${name}.webp`;
 
 export const refinedProducts = [
   { slug: "gasoil-diesel", icon: "diesel", title: "Gasoil / Diesel", image: T("diesel"),
@@ -257,7 +256,7 @@ export const productCategories = [
 export const products = [
   {
     slug: "b-exo-dual-pack-wax", category: "flow-assurance", title: "B-EXO Dual Pack Wax",
-    image: I("2023-03-B-EXO.jpg"),
+    image: I("2023-03-B-EXO.webp"),
     excerpt: "A unique thermochemical system of two chemical pills injected simultaneously into the targeted location (well, pipeline, heat exchangers…).",
     description: ["B-EXO is a unique thermochemical system consisting of two chemical pills which are injected simultaneously into the targeted location (i.e. well, pipeline, heat exchangers, etc.). The reaction generates heat in situ that melts and disperses wax deposits where they form."],
     features: ["Two-pill thermochemical reaction", "In-situ heat generation", "Targets wells, pipelines and heat exchangers"],
@@ -265,7 +264,7 @@ export const products = [
   },
   {
     slug: "b-clenz-solution", category: "flow-assurance", title: "B-CLENZ Solution",
-    image: I("2023-03-b-clenz.jpg"), gallery: [I("2023-03-b-clenz-illustration-e1677849742643.jpg")],
+    image: I("2023-03-b-clenz.webp"), gallery: [I("2023-03-b-clenz-illustration-e1677849742643.webp")],
     excerpt: "A single-pack treatment that disperses and dissolves organic and inorganic deposits in tubing and pipelines — no heating, no agitation.",
     description: ["A specially formulated single-pack treatment to disperse and dissolve deposits in production tubing & pipeline. It reacts with both organic and inorganic deposits without any heating or mechanical agitation."],
     features: ["Deeper penetration into organic and non-organic deposition compared to conventional solvents", "Immediate reaction with wax and scale", "Needs no additional treatment on surface and is 100% compatible with crude", "Restores the tubing/pipeline close to design flow rate by removing all scale and deposits"],
@@ -273,7 +272,7 @@ export const products = [
   },
   {
     slug: "b-clenz-barium-sulphate-solution", category: "flow-assurance", title: "B-CLENZ Barium Sulphate Solution",
-    image: I("2023-03-b-clenz-sulphate.jpg"), gallery: [I("2023-03-b-clenz-suphate-illustration-rotated.jpg")],
+    image: I("2023-03-b-clenz-sulphate.webp"), gallery: [I("2023-03-b-clenz-suphate-illustration-rotated.webp")],
     excerpt: "By selecting the right chelating agent, Barium Sulphate scale can be effectively cleaned.",
     description: ["Barium Sulphate (BaSO₄) is the scale that precipitates in production tubing due to a disturbance in system pressures, temperatures, and the mixing of incompatible waters.", "B-CLENZ Barium Sulphate is a specially formulated solution: by selecting the right chelating agent, Barium Sulphate scale can be effectively cleaned."],
     features: ["Deeper penetration into organic and non-organic deposition compared to conventional solvents", "Immediate reaction with wax and scale", "100% compatible with crude, no surface treatment needed", "Restores tubing/pipeline close to design flow rate"],
@@ -281,7 +280,7 @@ export const products = [
   },
   {
     slug: "automated-man-less-entry-cleaning-of-crude-oil-tank", category: "flow-assurance", title: "Automated Man-Less Tank Cleaning",
-    image: I("2023-03-tank-cleaning-e1678037824577.png"), gallery: [I("2023-03-jet-mixer.jpg")],
+    image: I("2023-03-tank-cleaning-e1678037824577.webp"), gallery: [I("2023-03-jet-mixer.webp")],
     excerpt: "In-line jet mixing cleans crude oil storage tanks without removing them from service.",
     description: ["In-line Jet Mixing facilitates man-less cleaning of the storage tank with the introduction of high-velocity fluid jets into the crude oil tank for the purpose of shearing the paraffin and resuspending the accumulated sludge.", "Permanent installation of an in-line Jet Mixer in the tank's manway allows for desludging and cleaning of the crude oil storage tank without removing the tank from service. The Jet Mixer produces a high-velocity stream of a specialized chemical blend that shears, dissolves, and resuspends accumulated tank bottoms or sludge."],
     features: ["In-line jet mixing nozzle permanently installed", "Nozzles jet a high-velocity stream", "Periodic activation of the in-line jet mixer", "The tank remains in service during jetting", "Chemical blend compatible with the crude — no separation required"],
@@ -289,7 +288,7 @@ export const products = [
   },
   {
     slug: "geo-glider-xtreme-low-friction-centralizer", category: "downhole-tools", title: "GeoGLIDER™ XTREME Low Friction Centralizer",
-    image: I("2023-03-800_608cf8eed5620-2-e1678036378581.webp"), gallery: [I("2023-03-centralizer.jpg")],
+    image: I("2023-03-800_608cf8eed5620-2-e1678036378581.webp"), gallery: [I("2023-03-centralizer.webp")],
     excerpt: "A low-friction centralizer available in aluminum or zinc alloy, steel, or composite.",
     description: ["The GeoGLIDER™ XTREME centralizer is a low-friction centralizer irrespective of the material it is made of. It can be manufactured out of aluminum or zinc alloy, steel, or composite. Metal variants are made by casting and can be coated with PTFE to further reduce initial frictional losses during deployment."],
     features: ["Offset touch contact points", "Smaller hydraulic diameter", "Total contact area < 5 in²", "No sharp edges on blades or leading edge"],
@@ -305,7 +304,7 @@ export const products = [
   },
   {
     slug: "reactv-sub-drilling-assurance-solution", category: "downhole-tools", title: "REACTv Sub Drilling Assurance Solution",
-    image: I("2023-03-reactvsub-e1678032383950.jpg"), gallery: [I("2023-03-ACTv-Sleeve.webp")],
+    image: I("2023-03-reactvsub-e1678032383950.webp"), gallery: [I("2023-03-ACTv-Sleeve.webp")],
     excerpt: "An in-situ hydraulically actuated stabilized reamer for overpulls, tight spots, swelling shales and unstable formations.",
     description: ["If you have ever been faced with trying to pull your drill string out of a hole due to overpulls, tight spots, swelling shales, unstable formations, gumbo, or wellbore instability, the REACTv Sub is the solution.", "The REACTv Sub is an in-situ hydraulically actuated stabilized reamer with force-balanced cutters and torque reduction features, powered by a 1.5 – 2.2 stage inverted motor power section with seal assemblies that ensure no fluid discharge into the annulus."],
     features: ["Smooth leading edge for smoother transfer of energy", "Energy-balanced cutter placement", "Depth of cut control", "Hydraulically powered inverted motor power section", "Nozzled rotor for better transmission of telemetry data"],
@@ -313,7 +312,7 @@ export const products = [
   },
   {
     slug: "hydratm-multipurpose-shoe", category: "downhole-tools", title: "HYDRA™ Multipurpose Shoe",
-    image: I("2023-03-multipurpose-shoe.jpg"), gallery: [I("2023-03-multipurpose-shoe2.jpg")],
+    image: I("2023-03-multipurpose-shoe.webp"), gallery: [I("2023-03-multipurpose-shoe2.webp")],
     excerpt: "With rotary speeds above 1500 RPM, the ideal candidate for casing and liner cementing operations.",
     description: ["The HYDRA family of tools provides a variety of functions in the life of a well. This high-speed system can be configured and run as a high-speed reaming solution for casing or tubular deployment, used as a casing scraper with an integrated wire brush, or as a jetting tool for wellbore clean-up operations.", "With rotary speeds in excess of 1500 RPM, the fluid pattern created at the shoe ensures better mud conditioning and minimizes cement/mud contamination during cementing."],
     features: ["High rotational speeds achieved with fluid circulation down the string", "Low and uniform pressure drop — ideal for completion strings", "Fluid activated, multiple interchangeable jets", "High-speed bearings capable of > 3000 RPM for > 500 hours", "Customisable nose profiles"],
@@ -323,7 +322,7 @@ export const products = [
 
 export const supplyBlocks = [
   { title: "Rig Supply", text: "Land rigs, swamp rigs, shallow and Jack-Up rigs. Our expert team works with operators and suppliers to keep costs down and mitigate risk across the supply chain.", images: [img.jackup2, img.jackup] },
-  { title: "Diesel Generator Rentals & Sales", text: "Reliable power for your sites — CAT generator rentals and sales, delivered, installed and maintained by our team.", images: [img.generator, I("2023-03-Offre-Groupe-Electrogene-Techno-Plus-2.jpg")] },
+  { title: "Diesel Generator Rentals & Sales", text: "Reliable power for your sites — CAT generator rentals and sales, delivered, installed and maintained by our team.", images: [img.generator, I("2023-03-Offre-Groupe-Electrogene-Techno-Plus-2.webp")] },
 ];
 
 // ---------------------------------------------------------------------
@@ -333,20 +332,20 @@ export const projects = [
   {
     slug: "front-end-detailed-engineering-design", title: "LPG Pipeline — Front-End & Detailed Engineering", category: "Facilities Engineering",
     client: "BURCOPLUS for SCDP", year: "2022", location: "Cameroon", contact: "Eliane FACHEUX, CEO",
-    image: I("2023-02-Burcoplus-SCDP.jpg"),
+    image: I("2023-02-Burcoplus-SCDP.webp"),
     text: "Front-End & Detailed Engineering Design for the construction of the LPG pipeline of SCDP, for our client BURCOPLUS. Our qualified manpower supported the client's team through FEED and detailed design, to the highest standards.",
   },
   {
     slug: "cat3516-60-hz-generator-rentals", title: "CAT3516 60 Hz Generator Rentals", category: "Facilities Procurement",
     client: "Groupe Camship-CLGG", year: "2021", location: "Cameroon",
-    image: I("2023-03-Offre-Groupe-Electrogene-Techno-Plus.jpg"),
-    gallery: ["2023-03-Offre-Groupe-Electrogene-Techno-Plus-1.jpg", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-2.jpg", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-3.jpg", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-4.jpg", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-5.jpg"].map(I),
+    image: I("2023-03-Offre-Groupe-Electrogene-Techno-Plus.webp"),
+    gallery: ["2023-03-Offre-Groupe-Electrogene-Techno-Plus-1.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-2.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-3.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-4.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-5.webp"].map(I),
     text: "Rental of CAT3516 60 Hz power generators for Groupe Camship-CLGG, including delivery, installation and support.",
   },
   {
     slug: "surface-equipment-material-supply-manpower-supply", title: "Surface Equipment, Material Supply & Manpower", category: "Facilities Procurement",
     client: "PETROFOR", year: "2016 – 2019", location: "Cameroon", contact: "Marc GUENIN, Africa Logistics & Supply Chain Manager",
-    image: I("2023-02-Petrofor-EQOS-e1678040626694.png"),
+    image: I("2023-02-Petrofor-EQOS-e1678040626694.webp"),
     text: "Surface equipment & material supply and manpower support for PETROFOR over four years of operations.",
   },
   {
@@ -386,7 +385,7 @@ export const projects = [
 // ---------------------------------------------------------------------
 export const team = [
   {
-    slug: "cyriaque-tchassem-nounamo", name: "Cyriaque Tchassem Nounamo", role: "Managing Director", photo: I("2022-05-Tchassem.png"),
+    slug: "cyriaque-tchassem-nounamo", name: "Cyriaque Tchassem Nounamo", role: "Managing Director", photo: I("2022-05-Tchassem.webp"),
     short: "Mechanical Engineer with over 30 years of experience in the oil & gas industry. Former Schlumberger, founder of Equatorial Oilfield Services in 2011.",
     bio: [
       "Cyriaque is a renowned Mechanical Engineer in the Gulf of Guinea, with over 30 years of experience in Drilling Engineering and the Construction of Metallic Structures in the oil & gas industry.",
@@ -396,7 +395,7 @@ export const team = [
     skills: ["Drilling Engineering", "Metallic structures", "Project leadership", "Local content development"],
   },
   {
-    slug: "douanla-tiwa-jean-luther", name: "Douanla Tiwa Jean Luther", role: "Financial Advisor", photo: I("2022-05-Luther-Tiwa.png"),
+    slug: "douanla-tiwa-jean-luther", name: "Douanla Tiwa Jean Luther", role: "Financial Advisor", photo: I("2022-05-Luther-Tiwa.webp"),
     short: "Trained banker with a Master's in Banking and Finance. Joined EQOS in 2021 as CFO to expand the group's activities in West and Central Africa.",
     bio: [
       "Luther is a trained banker. He obtained a degree in Monetary and Banking Economics from the University of Douala and a Master's degree in Banking and Finance from the University of Dschang.",
@@ -406,7 +405,7 @@ export const team = [
     skills: ["Corporate finance", "Banking", "Trade finance", "Business development"],
   },
   {
-    slug: "fotso-jean-blaise", name: "Fotso Jean Blaise", role: "Facilities & HSE Advisor", photo: I("2022-05-Fotso-jb.png"),
+    slug: "fotso-jean-blaise", name: "Fotso Jean Blaise", role: "Facilities & HSE Advisor", photo: I("2022-05-Fotso-jb.webp"),
     short: "Lead HSE with 18+ years of experience across Cameroon, the DRC and Congo Brazzaville. Joined EQOS in 2021.",
     bio: [
       "Fotso is a Lead HSE with over 18 years of experience working with several companies at home and abroad, especially in the Democratic Republic of Congo (DRC) and Congo Brazzaville.",
@@ -433,22 +432,22 @@ export const testimonials = [
 ];
 
 export const clients = [
-  { name: "SCDP", logo: I("2022-05-SCDP.jpg") },
-  { name: "Addax Petroleum", logo: I("2022-05-addax.jpg") },
-  { name: "Petrofor", logo: I("2022-05-PETROFOR.jpg") },
-  { name: "Bowleven", logo: I("2022-05-bowleven.gif") },
-  { name: "Perenco", logo: I("2022-05-perenco.png") },
-  { name: "Schlumberger", logo: I("2022-05-Schlumberger.png") },
+  { name: "SCDP", logo: I("2022-05-SCDP.webp") },
+  { name: "Addax Petroleum", logo: I("2022-05-addax.webp") },
+  { name: "Petrofor", logo: I("2022-05-PETROFOR.webp") },
+  { name: "Bowleven", logo: I("2022-05-bowleven.webp") },
+  { name: "Perenco", logo: I("2022-05-perenco.webp") },
+  { name: "Schlumberger", logo: I("2022-05-Schlumberger.webp") },
 ];
 
 export const partners = [
-  { name: "FT Services", logo: I("2022-05-FT-SERVICE.png") },
-  { name: "SafEchaf", logo: I("2022-05-SAFEECHAF.png") },
-  { name: "MA-ES", logo: I("2022-05-MA-ES-3.png") },
-  { name: "Afrigaz", logo: I("2022-05-AFRIGAS.jpg") },
-  { name: "2Power Construction Services", logo: I("2022-05-2pOWER.jpg") },
-  { name: "Geopro", logo: I("2023-02-Geopro.png") },
-  { name: "Calvante", logo: I("2023-02-Calvante.png") },
+  { name: "FT Services", logo: I("2022-05-FT-SERVICE.webp") },
+  { name: "SafEchaf", logo: I("2022-05-SAFEECHAF.webp") },
+  { name: "MA-ES", logo: I("2022-05-MA-ES-3.webp") },
+  { name: "Afrigaz", logo: I("2022-05-AFRIGAS.webp") },
+  { name: "2Power Construction Services", logo: I("2022-05-2pOWER.webp") },
+  { name: "Geopro", logo: I("2023-02-Geopro.webp") },
+  { name: "Calvante", logo: I("2023-02-Calvante.webp") },
 ];
 
 export const faqs = [

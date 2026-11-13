@@ -16,9 +16,9 @@ RewriteRule ^wp-login\.php$ / [L,R=301]
 RewriteRule ^wp-admin / [L,R=301]
 
 # Anciennes images WordPress (/wp-content/uploads/2023/03/photo-300x200.jpg)
-# -> nouvelles images (/images/2023-03-photo.jpg), si le fichier existe
-RewriteCond %{DOCUMENT_ROOT}/images/$1-$2-$3.$5 -f
-RewriteRule ^wp-content/uploads/(\d{4})/(\d{2})/(.+?)(-\d+x\d+)?\.(jpe?g|png|webp|gif)$ /images/$1-$2-$3.$5 [L,R=301,NC]
+# -> nouvelles images WebP (/images/2023-03-photo.webp), si le fichier existe
+RewriteCond %{DOCUMENT_ROOT}/images/$1-$2-$3.webp -f
+RewriteRule ^wp-content/uploads/(\d{4})/(\d{2})/(.+?)(-\d+x\d+)?\.(jpe?g|png|webp|gif)$ /images/$1-$2-$3.webp [L,R=301,NC]
 
 # Flux RSS, catégories, auteurs, liens courts WordPress -> accueil
 RewriteRule ^(comments/)?feed/?$ / [L,R=301]
