@@ -331,54 +331,65 @@ export const supplyBlocks = [
 export const projects = [
   {
     slug: "front-end-detailed-engineering-design", title: "LPG Pipeline — Front-End & Detailed Engineering", category: "Facilities Engineering",
-    client: "BURCOPLUS for SCDP", year: "2022", location: "Cameroon", contact: "Eliane FACHEUX, CEO",
+    client: "BURCOPLUS for SCDP", year: "2022", location: "Cameroon", place: "douala", contact: "Eliane FACHEUX, CEO",
     image: I("2023-02-Burcoplus-SCDP.webp"),
     text: "Front-End & Detailed Engineering Design for the construction of the LPG pipeline of SCDP, for our client BURCOPLUS. Our qualified manpower supported the client's team through FEED and detailed design, to the highest standards.",
   },
   {
     slug: "cat3516-60-hz-generator-rentals", title: "CAT3516 60 Hz Generator Rentals", category: "Facilities Procurement",
-    client: "Groupe Camship-CLGG", year: "2021", location: "Cameroon",
+    client: "Groupe Camship-CLGG", year: "2021", location: "Cameroon", place: "douala",
     image: I("2023-03-Offre-Groupe-Electrogene-Techno-Plus.webp"),
     gallery: ["2023-03-Offre-Groupe-Electrogene-Techno-Plus-1.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-2.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-3.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-4.webp", "2023-03-Offre-Groupe-Electrogene-Techno-Plus-5.webp"].map(I),
     text: "Rental of CAT3516 60 Hz power generators for Groupe Camship-CLGG, including delivery, installation and support.",
   },
   {
     slug: "surface-equipment-material-supply-manpower-supply", title: "Surface Equipment, Material Supply & Manpower", category: "Facilities Procurement",
-    client: "PETROFOR", year: "2016 – 2019", location: "Cameroon", contact: "Marc GUENIN, Africa Logistics & Supply Chain Manager",
+    client: "PETROFOR", year: "2016 – 2019", location: "Cameroon", place: "douala", contact: "Marc GUENIN, Africa Logistics & Supply Chain Manager",
     image: I("2023-02-Petrofor-EQOS-e1678040626694.webp"),
     text: "Surface equipment & material supply and manpower support for PETROFOR over four years of operations.",
   },
   {
     slug: "manpower-support", title: "Manpower Support", category: "Manpower Support",
-    client: "SCHLUMBERGER", year: "2016", location: "Cameroon", contact: "Yves TCHIEJI, Country Manager",
+    client: "SCHLUMBERGER", year: "2016", location: "Cameroon", place: "douala", contact: "Yves TCHIEJI, Country Manager",
     image: img.engineer,
     text: "Manpower support for project management and directional drilling consultancy for SCHLUMBERGER.",
   },
   {
     slug: "drilling-engineering", title: "Drilling Engineering", category: "Drilling Engineering",
-    client: "ADDAX PETROLEUM", year: "2013 & 2019", location: "Cameroon", contact: "Christophe COUDYSER, Drilling Manager",
+    client: "ADDAX PETROLEUM", year: "2013 & 2019", location: "Cameroon", place: "riodelrey", contact: "Christophe COUDYSER, Drilling Manager",
     image: img.heroPlatform,
     text: "Drilling engineering services for ADDAX PETROLEUM across two campaigns.",
   },
   {
     slug: "directional-drilling-consultancy", title: "Directional Drilling Consultancy", category: "Drilling Engineering",
-    client: "PERENCO", year: "2017", location: "Cameroon", contact: "Thierry Batot, Sr Drilling & Completion Superintendent",
+    client: "PERENCO", year: "2017", location: "Cameroon", place: "riodelrey", contact: "Thierry Batot, Sr Drilling & Completion Superintendent",
     image: img.heroRig,
     text: "Directional drilling consultancy for PERENCO's operations in Cameroon.",
   },
   {
     slug: "consultancy-for-rig-management", title: "Consultancy for Rig Management", category: "Rig Supply",
-    client: "Savannah Oil & Gas", year: "2017", location: "Cameroon", contact: "Jean Claude TCHAGOU TIEGUE, CEO",
+    client: "Savannah Oil & Gas", year: "2017", location: "Cameroon", place: "douala", contact: "Jean Claude TCHAGOU TIEGUE, CEO",
     image: img.jackup2,
     text: "Rig management consultancy for Savannah Oil & Gas.",
   },
   {
     slug: "facility-installation-bomono-project-manpower-supply-completion-engineering-drilling-rig-supply", title: "Bomono Project — Facility Installation, Rig Supply & Manpower", category: "Rig Supply",
-    client: "Euroil", year: "2013", location: "Cameroon", contact: "Denis KHRAN, Drilling Manager",
+    client: "Euroil", year: "2013", location: "Cameroon", place: "bomono", contact: "Denis KHRAN, Drilling Manager",
     image: img.heroYellow,
     text: "Facility installation (Bomono project), manpower supply, completion engineering and drilling rig supply for Euroil.",
   },
 ];
+
+// ---------------------------------------------------------------------
+//  LIEUX DES PROJETS (carte interactive de la page Projets)
+//  Chaque projet a un champ `place` qui renvoie à un lieu ci-dessous.
+//  Positions à confirmer par la direction : modifiez lat / lng si besoin.
+// ---------------------------------------------------------------------
+export const places = {
+  douala: { name: "Douala", area: "Littoral Region", lat: 4.05, lng: 9.7, hq: true },
+  bomono: { name: "Bomono", area: "Littoral Region", lat: 4.17, lng: 9.53 },
+  riodelrey: { name: "Rio del Rey", area: "Offshore basin", lat: 4.55, lng: 8.7, offshore: true },
+};
 
 // ---------------------------------------------------------------------
 //  ÉQUIPE
@@ -448,6 +459,7 @@ export const partners = [
   { name: "2Power Construction Services", logo: I("2022-05-2pOWER.webp") },
   { name: "Geopro", logo: I("2023-02-Geopro.webp") },
   { name: "Calvante", logo: I("2023-02-Calvante.webp") },
+  { name: "Olive Energy", logo: I("partner-olive-energy.webp") },
 ];
 
 export const faqs = [

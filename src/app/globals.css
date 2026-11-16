@@ -713,3 +713,100 @@ ul { margin: 0; padding: 0; list-style: none; }
 .feature .trade__icon { color: var(--yellow); width: 50px; height: 50px; margin-bottom: 18px; transition: color 0.4s; }
 .feature:hover .trade__icon { color: var(--navy); }
 a.feature { display: block; }
+
+/* Page Clients : texte collant sur grand écran seulement
+   (sur mobile les colonnes s'empilent : les logos passaient par-dessus le texte) */
+.clients-intro { position: relative; }
+@media (min-width: 961px) { .clients-intro { position: sticky; top: 110px; } }
+
+/* =====================================================================
+   CARTE INTERACTIVE DES PROJETS (page Projets)
+   ===================================================================== */
+.pmap { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #fff; }
+@media (max-width: 960px) { .pmap { grid-template-columns: 1fr; } }
+.pmap__map { position: relative; background: var(--navy); min-height: 500px; }
+/* la carte remplit toute la hauteur, même quand la liste de projets est longue */
+.pmap__map > svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+@media (max-width: 960px) { .pmap__map { min-height: 0; aspect-ratio: 1000 / 682; } }
+
+.map__grid line { stroke: rgba(255, 255, 255, 0.06); stroke-width: 1; stroke-dasharray: 4 6; }
+.map__grid text { fill: rgba(255, 255, 255, 0.3); font-size: 13px; font-weight: 600; letter-spacing: 0.05em; }
+.map__country { fill: rgba(255, 255, 255, 0.05); stroke: rgba(255, 255, 255, 0.22); stroke-width: 1.2; stroke-linejoin: round; }
+.map__cmr-fill { fill: url(#dots); opacity: 0; transition: opacity 1.2s var(--ease) 0.9s; }
+.map__cmr { fill: rgba(247, 198, 0, 0.07); stroke: var(--yellow); stroke-width: 2.2; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.pmap.is-in .map__cmr { animation: mapDraw 2.4s var(--ease) 0.2s forwards; }
+.pmap.is-in .map__cmr-fill { opacity: 1; }
+@keyframes mapDraw { to { stroke-dashoffset: 0; } }
+.map__label { fill: rgba(255, 255, 255, 0.4); font-size: 15px; font-weight: 800; letter-spacing: 0.32em; text-anchor: middle; pointer-events: none; }
+.map__label--main { fill: rgba(247, 198, 0, 0.75); font-size: 22px; letter-spacing: 0.45em; }
+.map__label--small { font-size: 11px; letter-spacing: 0.2em; }
+.map__label--sea { fill: rgba(255, 255, 255, 0.35); font-size: 17px; font-weight: 500; font-style: italic; letter-spacing: 0.12em; }
+
+.map__link { fill: none; stroke: rgba(247, 198, 0, 0.35); stroke-width: 1.6; stroke-dasharray: 6 7; animation: linkFlow 1.2s linear infinite; transition: stroke 0.3s; }
+.map__link.is-on { stroke: var(--yellow); stroke-width: 2.2; }
+@keyframes linkFlow { to { stroke-dashoffset: -26; } }
+
+.map__pin { cursor: pointer; outline: none; opacity: 0; }
+.pmap.is-in .map__pin { animation: pinIn 0.8s var(--ease) both; animation-delay: calc(1s + var(--i) * 0.18s); }
+@keyframes pinIn { from { opacity: 0; } to { opacity: 1; } }
+.map__dot { fill: var(--navy); stroke: var(--yellow); stroke-width: 3; transition: fill 0.3s; }
+.map__pin.is-hq .map__dot { fill: var(--yellow); stroke: #fff; }
+.map__pin.is-on .map__dot, .map__pin:hover .map__dot { fill: var(--yellow); stroke: #fff; }
+.map__pin:focus-visible .map__dot { stroke: #fff; stroke-width: 4; }
+.map__star { fill: var(--navy); }
+.map__count { fill: var(--yellow); font-size: 12px; font-weight: 800; text-anchor: middle; pointer-events: none; transition: fill 0.3s; }
+.map__pin.is-on .map__count, .map__pin:hover .map__count { fill: var(--navy); }
+.map__pulse { fill: none; stroke: var(--yellow); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; animation: pinPulse 2.6s ease-out infinite; }
+.map__pulse--2 { animation-delay: 1.3s; }
+@keyframes pinPulse { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(2.6); opacity: 0; } }
+.map__tag text { fill: #fff; font-size: 15px; font-weight: 700; paint-order: stroke; stroke: var(--navy); stroke-width: 5px; stroke-linejoin: round; transition: fill 0.3s; }
+.map__pin.is-on .map__tag text { fill: var(--yellow); }
+
+.pmap__inset { position: absolute; right: 16px; bottom: 16px; width: 92px; padding: 8px 8px 6px; border-radius: 6px; background: rgba(9, 1, 51, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); text-align: center; }
+.pmap__inset svg { display: block; width: 100%; height: auto; }
+.pmap__inset path { fill: rgba(247, 198, 0, 0.18); stroke: var(--yellow); stroke-width: 1.4; }
+.pmap__inset rect { fill: rgba(255, 255, 255, 0.12); stroke: #fff; stroke-width: 1.4; }
+.pmap__inset span { display: block; margin-top: 4px; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
+.pmap__legend { position: absolute; left: 16px; top: 16px; display: flex; gap: 14px; padding: 8px 12px; border-radius: 6px; background: rgba(9, 1, 51, 0.7); font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.8); }
+.pmap__legend span { display: inline-flex; align-items: center; gap: 7px; }
+.pmap__legend i { width: 11px; height: 11px; border-radius: 50%; }
+.lg-hq { background: var(--yellow); box-shadow: 0 0 0 2px #fff inset; }
+.lg-site { background: var(--navy); box-shadow: 0 0 0 2.5px var(--yellow) inset; }
+
+.pmap__panel { display: flex; flex-direction: column; padding: 28px 26px 24px; min-width: 0; }
+.pmap__head { animation: fadeUp 0.5s var(--ease); }
+.pmap__head .kicker { margin-bottom: 8px; }
+.pmap__head h3 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 28px; margin-bottom: 4px; }
+.pmap__head h3 em { font-style: normal; padding: 4px 10px; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; background: var(--yellow); color: var(--navy); border-radius: 2px; }
+.pmap__head p { color: var(--muted); margin-bottom: 16px; }
+.pmap__head strong { color: var(--ink); }
+.pmap__list { display: grid; gap: 8px; flex: 1; align-content: start; }
+.pmap__list li { animation: fadeUp 0.5s var(--ease) both; animation-delay: calc(var(--i) * 70ms); }
+.pmap__list a { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 12px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); transition: all 0.3s var(--ease); }
+.pmap__list a:hover { border-color: var(--yellow); background: var(--bg-soft); transform: translateX(4px); }
+.pmap__list img { width: 54px; height: 44px; object-fit: cover; border-radius: 3px; }
+.pmap__list span { display: grid; min-width: 0; }
+.pmap__list small { font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #b08d00; }
+.pmap__list strong { color: var(--ink); font-size: 14px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pmap__list em { font-style: normal; font-size: 13px; color: var(--muted); }
+.pmap__list .arrow { color: var(--muted); transition: transform 0.3s var(--ease), color 0.3s; }
+.pmap__list a:hover .arrow { color: var(--yellow); transform: rotate(-45deg); }
+.pmap__places { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.pmap__places button { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 40px; border: 1.5px solid var(--line); background: #fff; font-size: 13.5px; font-weight: 700; color: var(--ink); transition: all 0.3s var(--ease); }
+.pmap__places button b { display: grid; place-items: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--bg-soft); font-size: 11px; }
+.pmap__places button:hover { border-color: var(--navy); }
+.pmap__places button.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.pmap__places button.is-on b { background: var(--yellow); color: var(--navy); }
+@media (max-width: 560px) {
+  .pmap__panel { padding: 26px 18px 22px; }
+  .pmap__legend { display: none; } /* les noms des lieux suffisent sur mobile */
+  .pmap__inset { width: 48px; padding: 5px 5px 3px; right: 8px; bottom: 8px; }
+  .pmap__inset span { display: none; }
+  .map__tag text { font-size: 22px; stroke-width: 7px; }
+  .map__label--main { font-size: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map__cmr { stroke-dashoffset: 0; }
+  .map__pin { opacity: 1; }
+  .map__pulse, .map__link { animation: none; }
+}

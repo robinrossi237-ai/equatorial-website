@@ -12,7 +12,7 @@ export default function Clients() {
 
       <section className="section">
         <div className="container split" style={{ alignItems: "start" }}>
-          <div style={{ position: "sticky", top: 110 }}>
+          <div className="clients-intro">
             <div className="kicker reveal">Clients</div>
             <h2 className="reveal" style={{ fontSize: "clamp(30px,3.8vw,46px)" }}>Clients who trust Equatorial Oilfield Services</h2>
             <p className="lead reveal">We are proud to serve our clients with excellence and integrity. Since 2011, we have provided reliable and cost-effective oil and gas solutions, earning the trust and respect of many satisfied customers.</p>
